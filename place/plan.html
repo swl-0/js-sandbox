@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>r/place planner</title>
+    <script src="js/main.js" async></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        canvas {
+            position: absolute;
+            left: 0; 
+            top: 0;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: -webkit-crisp-edges;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+            z-index: 0;
+        }
+
+        .floating-menu {
+            font-family: sans-serif;
+            background: yellowgreen;
+            padding: 5px;
+            width: 130px;
+            z-index: 100;
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+        }
+
+        .floating-menu a, 
+        .floating-menu h3 {
+            font-size: 0.9em;
+            display: block;
+            margin: 0 0.5em;
+            color: white;
+        }
+
+        #floating-info {
+            font-family: sans-serif;
+            background: white;
+            padding: 5px;
+            width: 100px;
+            z-index: 100;
+        }
+    </style>
+  </head>
+  <body id="body">
+    <canvas id="canvas"></canvas>
+    <div class="floating-menu">
+        <button id="plus"> + </button>
+        <button id="minus"> - </button>
+        <h3>PNG URL :</h3>
+        <input id="url-png" type="text" autocomplete="off"/>
+        <button id="val-png">Submit</button>
+        <h3>Top-left tile X :</h3>
+        <input id="x-origin" type="text" autocomplete="off"/>
+        <button id="val-x">Submit</button>
+        <h3>Top-left tile Y :</h3>
+        <input id="y-origin" type="text" autocomplete="off"/>
+        <button id="val-y">Submit</button>
+        <button id="share-link">Copy Link</button>
+    </div>
+    <div id="floating-info"></div>
+  </body>
+</html>
